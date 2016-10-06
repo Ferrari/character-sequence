@@ -11,5 +11,8 @@
     "node": ">= 4.0.0"
   },
   "author": "Ferrari Lee <shiyung@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "left-pad": "^1.1.3"
+  }
 }
