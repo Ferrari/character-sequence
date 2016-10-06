@@ -1,0 +1,15 @@
+{
+  "name": "character-sequence",
+  "version": "1.0.0",
+  "description": "Small toolkit can count word sequence and do something else",
+  "main": "index.js",
+  "keywords": [
+    "tools",
+    "chararter"
+  ],
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "author": "Ferrari Lee <shiyung@gmail.com>",
+  "license": "ISC"
+}
