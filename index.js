@@ -27,7 +27,7 @@ function CharacterSequence (word, opts) {
     ? _countCharSeq(word, true)
     : _countCharSeq(word, false)
 
-  return (opts && opts.merge === true)
+  return (opts && opts.sum === true)
   ? countArr.reduce((prev, curr) => { return (prev += curr) })
   : countArr
 }
