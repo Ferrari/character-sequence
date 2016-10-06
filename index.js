@@ -45,6 +45,29 @@ module.exports = {
 
   },
   seq2char: function (seq, opts) {
-
+    let character = ''
+    if (Array.isArray(seq)) {
+      seq.forEach((char) => {
+        let convertChar = parseInt(char, 10)
+        if (CHAR_ARRAY[convertChar] === undefined) {
+          return false
+        } else {
+          character += CHAR_ARRAY[convertChar]
+        }
+      })
+    } else if (typeof seq === 'string' && opts && opts.unit && Number.isInteger(opts.unit)) {
+      while (seq.length >= opts.unit) {
+        let pop = parseInt(seq.substring(0, (opts.unit)), 10)
+        if (CHAR_ARRAY[pop] === undefined) {
+          return false
+        } else {
+          character += CHAR_ARRAY[pop]
+        }
+        seq = seq.slice(opts.unit)
+      }
+    } else {
+      return false
+    }
+    return character
   }
 }
