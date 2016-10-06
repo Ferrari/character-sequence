@@ -24,4 +24,9 @@ var count3 = CharacterSequence('small', { positive: true })
 
 var count4 = CharacterSequence('test', { sum: true })
 // count4: 60
+
+var count5 = CharacterSequence('test-abc')
+// [ 19, 4, 18, 19, 0, 1, 2 ]
+var count6 = CharacterSequence('test-abc', { noSkip: true })
+// [ 19, 4, 18, 19, -1, 0, 1, 2 ]
 ```
